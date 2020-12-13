@@ -26,4 +26,4 @@ app.use(require('./routes/home.routes'))
 
 
 mongoose.connect('mongodb+srv://ahmedmuti:ahmedmuti@route.3dpk6.mongodb.net/notesdb', { useNewUrlParser: true, useUnifiedTopology: true })
-app.listen(port, () => console.log(`Example app listening on port port!`))
+app.listen(process.env.PORT || port, () => console.log(`Example app listening on port port!`))
