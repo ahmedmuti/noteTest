@@ -1,17 +1,5 @@
 const userModel = require('../models/user.model')
-const bcrypt = require('bcryptjs');
-module.exports.sginin = (req, res) => {
-    var isEmail
-    if (req.flash('myKey')[0] == 'amira') {
-        isEmail = false
-    } else {
-        isEmail = true
-
-    }
-    res.render('signin.ejs', { isLoggedIn: false, isTrue: true, isEmail })
-}
-
-
+const bcrypt = require('bcrypt');
 module.exports.handleSginin = async(req, res) => {
 
     console.log(req.body);
@@ -42,4 +30,16 @@ module.exports.handleSginin = async(req, res) => {
     }
 
 
+}
+
+
+module.exports.sginin = (req, res) => {
+    var isEmail
+    if (req.flash('myKey')[0] == 'amira') {
+        isEmail = false
+    } else {
+        isEmail = true
+
+    }
+    res.render('signin.ejs', { isLoggedIn: false, isTrue: true, isEmail })
 }

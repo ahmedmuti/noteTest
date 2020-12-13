@@ -1,18 +1,9 @@
 const app = require('express').Router()
 const { check, validationResult } = require('express-validator')
 const userModel = require('../models/user.model')
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 app.get('/', (req, res) => {
-    var isEmail = true
-    if (req.flash('myKey')[0] == 'amira') {
-        isEmail = false
-    } else {
-        isEmail = true
-
-    }
-    // res.render('signup.ejs', { errors: [], isLoggedIn: false, oldInputs: { fname: '', lname: '', email: '', password: '', rePassword: '' } })
-    res.render('signin.ejs', { isLoggedIn: false, isTrue: true, isEmail })
-
+    res.render('signup.ejs', { errors: [], isLoggedIn: false, oldInputs: { fname: '', lname: '', email: '', password: '', rePassword: '' } })
 })
 
 app.post('/handleSignUp',
