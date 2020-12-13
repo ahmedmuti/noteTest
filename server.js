@@ -7,7 +7,7 @@ const session = require('express-session')
 var MongoDBStore = require('connect-mongodb-session')(session);
 var flash = require('connect-flash');
 var store = new MongoDBStore({
-    uri: 'mongodb+srv://ahmedmuti:ahmedmuti@route.3dpk6.mongodb.net/test',
+    uri: 'mongodb+srv://ahmedmuti:ahmedmuti@route.3dpk6.mongodb.net/notesdb',
     collection: 'mySessions'
 });
 app.use(session({
@@ -25,5 +25,5 @@ app.use(require('./routes/signin.routes'))
 app.use(require('./routes/home.routes'))
 
 
-mongoose.connect('mongodb+srv://ahmedmuti:ahmedmuti@route.3dpk6.mongodb.net/test', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://ahmedmuti:ahmedmuti@route.3dpk6.mongodb.net/notesdb', { useNewUrlParser: true, useUnifiedTopology: true })
 app.listen(port, () => console.log(`Example app listening on port port!`))
