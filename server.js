@@ -25,5 +25,5 @@ app.use(require('./routes/signin.routes'))
 app.use(require('./routes/home.routes'))
 
 
-mongoose.connect('mongodb://localhost:27017/notesDB', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://ahmedmuti:ahmedmuti@route.3dpk6.mongodb.net/notesdb', { useNewUrlParser: true, useUnifiedTopology: true })
 app.listen(process.env.PORT || port, () => console.log(`Example app listening on port port!`))
