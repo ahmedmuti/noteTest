@@ -7,7 +7,7 @@ const session = require('express-session')
 var MongoDBStore = require('connect-mongodb-session')(session);
 var flash = require('connect-flash');
 var store = new MongoDBStore({
-    uri: 'mongodb://localhost:27017/notesDB',
+    uri: 'mongodb+srv://ahmedmuti:ahmedmuti@route.3dpk6.mongodb.net/notesdb',
     collection: 'mySessions'
 });
 app.use(session({
