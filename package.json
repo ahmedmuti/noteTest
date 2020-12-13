@@ -2,16 +2,16 @@
     "name": "auth",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
-    },
-    "engines": {
-        "node": "12.19.0"
+        "start": "node app.js"
     },
     "author": "",
     "license": "ISC",
+    "engines": {
+        "node": "12.19.0"
+    },
     "dependencies": {
         "bcrypt": "^5.0.0",
         "connect-flash": "^0.1.1",
