@@ -8,9 +8,6 @@
         "start": "node server.js"
 
     },
-    "engines": {
-        "node": "13.14.0"
-    },
     "author": "",
     "license": "ISC",
     "dependencies": {
