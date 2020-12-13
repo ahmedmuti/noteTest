@@ -1,7 +1,7 @@
 const app = require('express').Router()
 const { check, validationResult } = require('express-validator')
 const userModel = require('../models/user.model')
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 app.get('/', (req, res) => {
     res.render('signup.ejs', { errors: [], isLoggedIn: false, oldInputs: { fname: '', lname: '', email: '', password: '', rePassword: '' } })
 })
