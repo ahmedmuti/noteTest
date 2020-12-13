@@ -3,7 +3,7 @@ const { check, validationResult } = require('express-validator')
 const userModel = require('../models/user.model')
 const bcrypt = require('bcryptjs');
 app.get('/', (req, res) => {
-    var isEmail
+    var isEmail = true
     if (req.flash('myKey')[0] == 'amira') {
         isEmail = false
     } else {
